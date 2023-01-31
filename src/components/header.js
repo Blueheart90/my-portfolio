@@ -1,10 +1,9 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 function Header() {
   return (
-    <header className="flex justify-between px-10 py-2 bg-primary text-light shadow-[0px_1px_4px_0px_#000]">
-      <div className="flex gap-14">
+    <header className="fixed flex justify-between w-screen px-10 py-2 bg-primary text-light">
+      <div className="flex gap-10">
         <Image
           src="img/code.svg"
           alt="Icono con el simbolo menor que seguido de una barra y el simbolo de mayor que"
@@ -12,7 +11,7 @@ function Header() {
           height={40}
         />
         <nav className="flex items-center">
-          <ul className="flex gap-10">
+          <ul className="flex gap-4">
             <li>
               <a href="#">Proyectos</a>
             </li>
@@ -28,10 +27,10 @@ function Header() {
           </ul>
         </nav>
       </div>
-      <div className="flex gap-10 items-center">
-        <button className="flex gap-1 items-center">
+      <div className="flex items-center gap-4">
+        <button className="flex items-center gap-1">
           <Image
-            src="img/language-icon.svg"
+            src="/img/language-icon.svg"
             alt="Icono con el simbolo menor que seguido de una barra y el simbolo de mayor que"
             width={20}
             height={20}
@@ -40,7 +39,7 @@ function Header() {
         </button>
         <button>
           <Image
-            src="img/dark-mode.svg"
+            src="/img/dark-mode.svg"
             alt="Icono con el simbolo menor que seguido de una barra y el simbolo de mayor que"
             width={20}
             height={20}

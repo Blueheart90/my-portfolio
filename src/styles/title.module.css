@@ -1,0 +1,10 @@
+.heading::before {
+    content: '>';
+    
+}
+.heading::after {
+content: '_';
+}
+.heading::before, .heading::after {
+color: var(--accent-color);
+}

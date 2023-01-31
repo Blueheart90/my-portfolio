@@ -1,0 +1,19 @@
+.svg-shadow {
+    filter: drop-shadow(0 10px 0 var(--accent-color));
+}
+
+.braces {
+color: var(--secondary-color);
+}
+
+.braces::before, .braces::after {
+color: var(--light-color);
+}
+.braces::before {
+content: '{';
+
+}
+.braces::after {
+content: '}';
+}
+  
