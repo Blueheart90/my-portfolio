@@ -9,3 +9,8 @@
   --light-color: #ECF0F1;
 }
 
+[class*="contenedor"] {
+  width: min(70%, 120rem);
+  margin: 3rem auto;
+}
+

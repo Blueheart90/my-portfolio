@@ -1,0 +1,20 @@
+
+.project-item::before {
+    content: '{';
+    
+}
+.project-item::after {
+    content: '},';
+    
+}
+
+.project-item::before,  .project-item::after{
+    color: var(--secondary-color);
+    font-size: 1.5rem/* 24px */;
+    line-height: 2rem/* 32px */;
+    font-weight: 800;
+}
+
+.after__description > p::before, .after__description > p::after{
+    content: '"';
+}
