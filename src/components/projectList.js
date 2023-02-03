@@ -19,7 +19,7 @@ function ProjectList() {
   const projects = use(getProjects());
 
   return (
-    <div className="flex flex-col gap-4 ">
+    <div className="flex flex-col h-screen gap-4 px-4 overflow-y-scroll snap-y ">
       {projects.map((project) => (
         <Project key={project.id} info={project} />
       ))}
