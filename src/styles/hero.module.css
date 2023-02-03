@@ -1,6 +1,4 @@
-.svg-shadow {
-    filter: drop-shadow(0 10px 0 var(--accent-color));
-}
+
 
 .braces {
 color: var(--secondary-color);

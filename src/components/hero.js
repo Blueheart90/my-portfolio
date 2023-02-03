@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import styles from '@/styles/hero.module.css';
+import SvgWave from './svgWave';
 
 function Hero() {
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen">
       <div className="flex items-center justify-center gap-40 px-40 pt-60 bg-primary">
         <figure className="inline-block overflow-hidden border-8 rounded-full w-72 border-accent bg-accent">
           <Image
@@ -32,17 +33,7 @@ function Hero() {
         </div>
       </div>
       <div className="relative">
-        <svg
-          className={`${styles['svg-shadow']}`}
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-        >
-          <path
-            fill="#2C3E50"
-            fill-opacity="1"
-            d="M0,96L1440,192L1440,0L0,0Z"
-          ></path>
-        </svg>
+        <SvgWave className={`svg-shadow fill-primary`} />
         <button>
           <svg
             className="absolute bottom-10 left-1/2 animate-bounce"

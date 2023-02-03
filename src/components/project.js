@@ -3,7 +3,7 @@ import TechList from './techList';
 import styles from '@/styles/project.module.css';
 
 function Project({ info }) {
-  const { title, description, img, tecnologies } = info.attributes;
+  const { title, description, img, tecnologies, github, url } = info.attributes;
 
   return (
     <div className="snap-start">
@@ -36,18 +36,22 @@ function Project({ info }) {
         </article>
       </div>
       <div className="flex justify-end gap-2">
-        <Image
-          src="/img/icon-github.svg"
-          width={50}
-          height={50}
-          alt={`Icono de github`}
-        />
-        <Image
-          src="/img/icon-external-link.svg"
-          width={50}
-          height={50}
-          alt={`Icono de link externo`}
-        />
+        <a href={github} target="_blank" rel="noopener noreferrer">
+          <Image
+            src="/img/icon-github.svg"
+            width={40}
+            height={40}
+            alt={`Icono de github`}
+          />
+        </a>
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          <Image
+            src="/img/icon-external-link.svg"
+            width={40}
+            height={40}
+            alt={`Icono de link externo`}
+          />
+        </a>
       </div>
     </div>
   );

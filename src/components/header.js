@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 function Header() {
   return (
-    <header className="fixed flex justify-between w-screen px-10 py-2 bg-primary text-light">
+    <header className="fixed z-10 flex justify-between w-screen px-10 py-2 bg-primary text-light">
       <div className="flex gap-10">
         <Image
           src="img/code.svg"

@@ -8,10 +8,17 @@
   --accent-color: #33CCCC;
   --light-color: #ECF0F1;
 }
+main {
+  background-color: var(--light-color);
+}
+
+.svg-shadow {
+  filter: drop-shadow(0 10px 0 var(--accent-color));
+}
 
 [class*="contenedor"] {
   width: min(70%, 120rem);
-  margin: 3rem auto;
+  margin: 0 auto;
 }
 
 /* width */
