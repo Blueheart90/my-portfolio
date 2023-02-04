@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Tooltip from './tooltip';
 import styles from '@/styles/techlist.module.css';
 
 function TechList({ list }) {
@@ -11,12 +12,14 @@ function TechList({ list }) {
           className={`${styles['tech-item']} flex items-center`}
           key={item.id}
         >
-          <Image
-            src={item.attributes.icon.data.attributes.url}
-            width={50}
-            height={50}
-            alt={`Imagen de la tecnologia ${item.name}`}
-          />
+          <Tooltip message={item.attributes.name}>
+            <Image
+              src={item.attributes.icon.data.attributes.url}
+              width={50}
+              height={50}
+              alt={`Imagen de la tecnologia ${item.name}`}
+            />
+          </Tooltip>
         </div>
       ))}
     </div>

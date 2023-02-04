@@ -5,6 +5,7 @@ import Title from '@/components/title';
 import Project from '@/components/project';
 import ProjectList from '@/components/projectList';
 import SvgWave from '@/components/svgWave';
+import AboutMe from '@/components/aboutMe';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,17 +14,19 @@ export default function Home() {
     <main>
       <Hero />
       <section className=" bg-light">
-        <div className="contenedor">
+        <article className="contenedor">
           <Title styles={'text-primary'}>Proyectos</Title>
           <ProjectList />
-        </div>
+        </article>
       </section>
       <SvgWave className={`svg-shadow fill-primary rotate-180`} />
       <section className=" bg-primary">
-        <div className="contenedor">
+        <article className="contenedor">
           <Title styles={'text-light'}>Sobre mí</Title>
-        </div>
+          <AboutMe />
+        </article>
       </section>
+      <SvgWave className={`svg-shadow fill-primary`} />
     </main>
   );
 }

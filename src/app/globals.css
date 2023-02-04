@@ -42,3 +42,17 @@ main {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-color); 
 }
+
+.btn::before {
+  content: '<';
+}
+.btn::after {
+  content: '/>';
+}
+
+.btn::before,  .btn::after{
+  color: var(--accent-color);
+  font-size: 1.5rem/* 24px */;
+  line-height: 2rem/* 32px */;
+  font-weight: 800;
+}
