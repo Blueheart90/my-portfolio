@@ -6,6 +6,7 @@ import Project from '@/components/project';
 import ProjectList from '@/components/projectList';
 import SvgWave from '@/components/svgWave';
 import AboutMe from '@/components/aboutMe';
+import ContactForm from '@/components/contactForm';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,6 +28,18 @@ export default function Home() {
         </article>
       </section>
       <SvgWave className={`svg-shadow fill-primary`} />
+      <section>
+        <article className="contenedor">
+          <Title styles={'text-primary'}>Contactame</Title>
+          <div className="px-56">
+            <p className="text-2xl">
+              No dudes en enviarme un mensaje con el formulario de abajo o por
+              el canal que prefieras, te responderé tan pronto como sea posible.
+            </p>
+          </div>
+          <ContactForm />
+        </article>
+      </section>
     </main>
   );
 }

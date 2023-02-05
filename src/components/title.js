@@ -4,7 +4,7 @@ import styles from '@/styles/title.module.css';
 function Title({ children, ...props }) {
   return (
     <h1
-      className={`py-10 text-center ${styles.heading} text-7xl ${props.styles}`}
+      className={`py-10 text-center ${styles.heading} text-7xl ${props.styles} font-medium`}
     >
       {children}
     </h1>
