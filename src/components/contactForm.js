@@ -7,12 +7,32 @@ import styles from '@/styles/contactform.module.css';
 import ButtonCustom from './buttonCustom';
 
 function ContactForm() {
+  const handlerSubmit = async (values) => {
+    const res = await fetch('/api/sendgrid', {
+      body: JSON.stringify({
+        email: values.email,
+        fullname: values.name,
+        subject: 'contacto subject',
+        message: values.message,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+    });
+
+    const { error } = await res.json();
+    if (error) {
+      console.log(error);
+      return;
+    }
+  };
   return (
     <div className="flex justify-center">
       <Formik
         initialValues={{ name: '', email: '', message: '' }}
         validationSchema={ContactFormSchema}
-        onSubmit={(values) => console.log(values)}
+        onSubmit={(values) => handlerSubmit(values)}
       >
         <Form
           className={`${styles['contact-form']} gap-6 text-2xl text-light grid p-6 bg-primary shadow-[10px_10px_0px_0px_#33CCCC]`}

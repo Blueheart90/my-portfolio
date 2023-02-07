@@ -6,7 +6,7 @@ function FieldCustom({ label, ...props }) {
   // console.log(field);
   return (
     <div className="flex flex-col ">
-      <label for={field.name}>{label}</label>
+      <label htmlFor={field.name}>{label}</label>
       {props.type === 'textarea' ? (
         <textarea {...field} {...props} cols="30" rows="6"></textarea>
       ) : (
