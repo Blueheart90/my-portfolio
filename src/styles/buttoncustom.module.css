@@ -1,0 +1,13 @@
+.btn::before {
+    content: '<';
+  }
+  .btn::after {
+    content: '/>';
+  }
+  
+  .btn::before,  .btn::after{
+    color: var(--accent-color);
+    font-size: 1.875rem/* 30px */;
+    line-height: 2.25rem/* 36px */;
+    font-weight: 800;
+  }

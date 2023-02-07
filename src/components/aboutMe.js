@@ -1,6 +1,7 @@
 import { use } from 'react';
 import Skill from './skill';
 import styles from '@/styles/aboutme.module.css';
+import ButtonCustom from './buttonCustom';
 
 export const getAboutMe = async () => {
   const requestOptions = {
@@ -31,17 +32,16 @@ export const getAboutMe = async () => {
 function AboutMe() {
   const { aboutme, skills } = use(getAboutMe());
   const cvPdf = aboutme.attributes.curriculum;
-  console.log(aboutme.attributes.curriculum);
 
   return (
     <div className="grid grid-cols-2 gap-10 text-2xl text-light">
       <div className="grid gap-14">
         <div dangerouslySetInnerHTML={{ __html: aboutme.attributes.content }} />
-        <button className="px-4 py-1 transition-all duration-500 border btn border-accent justify-self-center hover:bg-accent hover:text-primary hover:border-secondary h-fit">
+        <ButtonCustom>
           <a href={cvPdf} target="_blank" rel="noopener noreferrer">
             Descargar CV
           </a>
-        </button>
+        </ButtonCustom>
       </div>
       <div>
         <h3 className="mb-4 text-3xl">Mis habilidades</h3>
