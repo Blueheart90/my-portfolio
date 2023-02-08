@@ -7,7 +7,7 @@ import styles from '@/styles/contactform.module.css';
 import ButtonCustom from './buttonCustom';
 
 function ContactForm() {
-  const handlerSubmit = async (values) => {
+  const handleSubmit = async (values) => {
     const res = await fetch('/api/sendgrid', {
       body: JSON.stringify({
         email: values.email,
@@ -32,7 +32,7 @@ function ContactForm() {
       <Formik
         initialValues={{ name: '', email: '', message: '' }}
         validationSchema={ContactFormSchema}
-        onSubmit={(values) => handlerSubmit(values)}
+        onSubmit={(values) => handleSubmit(values)}
       >
         <Form
           className={`${styles['contact-form']} gap-6 text-2xl text-light grid p-6 bg-primary shadow-[10px_10px_0px_0px_#33CCCC]`}

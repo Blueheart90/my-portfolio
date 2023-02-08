@@ -7,13 +7,15 @@ import ProjectList from '@/components/projectList';
 import SvgWave from '@/components/svgWave';
 import AboutMe from '@/components/aboutMe';
 import ContactForm from '@/components/contactForm';
+import Footer from '@/components/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <Hero />{' '}
+      {/*
       <section className=" bg-light">
         <article className="contenedor">
           <Title styles={'text-primary'}>Proyectos</Title>
@@ -38,9 +40,9 @@ export default function Home() {
             </p>
           </div>
           <ContactForm />
-          <p>fdsfsdfasdfsd</p>
         </article>
       </section>
+      <Footer /> */}
     </main>
   );
 }

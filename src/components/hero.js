@@ -1,12 +1,11 @@
 import Image from 'next/image';
-import styles from '@/styles/hero.module.css';
 import SvgWave from './svgWave';
 
 function Hero() {
   return (
     <div className="min-h-screen">
-      <div className="flex items-center justify-center gap-40 px-40 pt-60 bg-primary">
-        <figure className="inline-block overflow-hidden border-8 rounded-full w-72 border-accent bg-accent">
+      <div className="flex flex-col items-center justify-center gap-10 px-10 py-20 xl:px-40 xl:gap-40 xl:pt-60 bg-primary xl:flex-row">
+        <figure className="inline-block overflow-hidden border-8 rounded-full w-52 xl:w-72 border-accent bg-accent">
           <Image
             src="/img/profile-photo.png"
             alt="Image frontal de persona"
@@ -14,14 +13,16 @@ function Hero() {
             height={300}
           />
         </figure>
-        <div>
-          <p className="text-7xl text-light">
+        <div className="flex flex-col items-center xl:items-start">
+          <p className="mb-4 text-5xl text-center xl:text-7xl xl:text-left text-light">
             Hola, mi nombre es {''}
-            <span className={`block font-extrabold ${styles.braces}`}>
+            <span
+              className={`block font-extrabold braces text-center xl:text-left`}
+            >
               Jesús David
             </span>
           </p>
-          <p className="text-4xl text-secondary">
+          <p className="text-4xl text-center xl:text-left text-secondary">
             Soy{' '}
             <span className="font-extrabold text-light">
               Ingeniero de sistemas
@@ -34,7 +35,7 @@ function Hero() {
       </div>
       <div className="relative">
         <SvgWave className={`svg-shadow fill-primary`} />
-        <button>
+        <button className="hidden lg:block">
           <svg
             className="absolute bottom-10 left-1/2 animate-bounce"
             width="78"
