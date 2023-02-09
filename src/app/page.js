@@ -15,25 +15,24 @@ export default function Home() {
   return (
     <main>
       <Hero />{' '}
-      {/*
       <section className=" bg-light">
-        <article className="contenedor">
+        <article className="container mx-auto">
           <Title styles={'text-primary'}>Proyectos</Title>
           <ProjectList />
         </article>
       </section>
       <SvgWave className={`svg-shadow fill-primary rotate-180`} />
-      <section className=" bg-primary">
-        <article className="contenedor">
+      <section className="-mt-1  bg-primary">
+        <article className="container mx-auto">
           <Title styles={'text-light'}>Sobre mí</Title>
           <AboutMe />
         </article>
       </section>
       <SvgWave className={`svg-shadow fill-primary`} />
       <section>
-        <article className="contenedor">
+        <article className="container mx-auto">
           <Title styles={'text-primary'}>Contactame</Title>
-          <div className="px-56">
+          <div className="w-3/4 mx-auto mb-10 ">
             <p className="text-2xl">
               No dudes en enviarme un mensaje con el formulario de abajo o por
               el canal que prefieras, te responderé tan pronto como sea posible.
@@ -42,7 +41,7 @@ export default function Home() {
           <ContactForm />
         </article>
       </section>
-      <Footer /> */}
+      <Footer />
     </main>
   );
 }

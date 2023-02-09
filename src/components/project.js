@@ -6,23 +6,23 @@ function Project({ info }) {
   const { title, description, img, tecnologies, github, url } = info.attributes;
 
   return (
-    <div className="snap-start">
+    <>
       <div className={styles['project-item']}>
-        <article className="grid grid-cols-5 gap-10 pl-10 text-2xl ">
+        <article className="grid gap-10 pl-10 text-xl xl:text-2xl xl:grid-cols-5 ">
           <div className="col-span-3 ">
             <div className="flex gap-4">
               <p>{'"title": '}</p>
               <h2 className="font-extrabold ">{`"${title}"`}</h2>
             </div>
-            <div className="flex gap-4">
+            <div className="flex flex-col xl:flex-row xl:gap-4">
               <p>{'"description": '}</p>
               <div
-                className={styles['after__description']}
+                className={`${styles['after__description']}`}
                 dangerouslySetInnerHTML={{ __html: description }}
               />
             </div>
           </div>
-          <figure className="col-span-2 shadow-[-10px_10px_0px_0px_#33CCCC] border border-primary h-fit ">
+          <figure className="col-span-2 shadow-[-10px_10px_0px_0px_#33CCCC] border border-primary h-fit hidden xl:block">
             <Image
               src={img.data[0].attributes.formats.small.url}
               width={580}
@@ -53,7 +53,7 @@ function Project({ info }) {
           />
         </a>
       </div>
-    </div>
+    </>
   );
 }
 

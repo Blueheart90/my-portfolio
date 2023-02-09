@@ -3,7 +3,7 @@ import SvgWave from './svgWave';
 
 function Hero() {
   return (
-    <div className="min-h-screen">
+    <div className="xl:min-h-screen">
       <div className="flex flex-col items-center justify-center gap-10 px-10 py-20 xl:px-40 xl:gap-40 xl:pt-60 bg-primary xl:flex-row">
         <figure className="inline-block overflow-hidden border-8 rounded-full w-52 xl:w-72 border-accent bg-accent">
           <Image

@@ -28,14 +28,14 @@ function ContactForm() {
     }
   };
   return (
-    <div className="flex justify-center">
+    <div className="max-w-lg mx-auto">
       <Formik
         initialValues={{ name: '', email: '', message: '' }}
         validationSchema={ContactFormSchema}
         onSubmit={(values) => handleSubmit(values)}
       >
         <Form
-          className={`${styles['contact-form']} gap-6 text-2xl text-light grid p-6 bg-primary shadow-[10px_10px_0px_0px_#33CCCC]`}
+          className={`gap-6 text-2xl text-light grid p-6 bg-primary shadow-[10px_10px_0px_0px_#33CCCC]`}
         >
           <FieldCustom
             name="name"
@@ -43,7 +43,7 @@ function ContactForm() {
             id="name"
             label="Nombre"
             placeholder="Jane Doe"
-            className="px-2 py-1 text-primary bg-light "
+            className="w-full px-2 py-1 text-primary bg-light"
           />
           <FieldCustom
             name="email"
@@ -51,7 +51,7 @@ function ContactForm() {
             id="email"
             label="Email"
             placeholder="jdoe@email.com"
-            className="px-2 py-1 text-primary bg-light"
+            className="w-full py-1 x-2 text-primary bg-light"
           />
           <FieldCustom
             name="message"
@@ -59,7 +59,7 @@ function ContactForm() {
             id="message"
             label="Mensaje"
             placeholder="mensaje..."
-            className="px-2 py-1 text-primary bg-light"
+            className="w-full px-2 py-1 text-primary bg-light"
           />
           <ButtonCustom type="submit">Enviar</ButtonCustom>
         </Form>

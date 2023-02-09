@@ -19,6 +19,7 @@ main {
 [class*="contenedor"] {
   width: min(70%, 120rem);
   margin: 0 auto;
+  
 }
 
 /* width */
