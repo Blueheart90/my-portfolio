@@ -1,10 +1,12 @@
+'use client';
 import Image from 'next/image';
 import SvgWave from './svgWave';
+import { Link } from 'react-scroll';
 
 function Hero() {
   return (
-    <div className="xl:min-h-screen">
-      <div className="flex flex-col items-center justify-center gap-10 px-10 py-20 xl:px-40 xl:gap-40 xl:pt-60 bg-primary xl:flex-row">
+    <div id="top">
+      <div className="flex flex-col items-center justify-center gap-10 px-10 py-20 xl:px-40 xl:gap-40 xl:pt-60 dark:bg-primary bg-light xl:flex-row">
         <figure className="inline-block overflow-hidden border-8 rounded-full w-52 xl:w-72 border-accent bg-accent">
           <Image
             src="/img/profile-photo.png"
@@ -14,28 +16,35 @@ function Hero() {
           />
         </figure>
         <div className="flex flex-col items-center xl:items-start">
-          <p className="mb-4 text-5xl text-center xl:text-7xl xl:text-left text-light">
+          <p className="mb-4 text-5xl text-center xl:text-7xl xl:text-left dark:text-light text-primary">
             Hola, mi nombre es {''}
             <span
-              className={`block font-extrabold braces text-center xl:text-left`}
+              className={`block font-extrabold before:content-['{'] after:content-['}'] before:text-accent after:text-accent dark:before:text-light dark:after:text-light dark:text-secondary text-primary  text-center xl:text-left`}
             >
               Jesús David
             </span>
           </p>
-          <p className="text-4xl text-center xl:text-left text-secondary">
+          <p className="text-4xl text-center xl:text-left dark:text-secondary text-primary">
             Soy{' '}
-            <span className="font-extrabold text-light">
+            <span className="px-1 font-extrabold dark:text-light text-accent">
               Ingeniero de sistemas
             </span>{' '}
             y{' '}
-            <span className="font-extrabold text-light">desarollador web</span>{' '}
+            <span className="px-1 font-extrabold dark:text-light text-accent">
+              desarollador web
+            </span>{' '}
             Colombiano
           </p>
         </div>
       </div>
-      <div className="relative">
-        <SvgWave className={`svg-shadow fill-primary`} />
-        <button className="hidden lg:block">
+      <div className="relative bg-white dark:bg-light">
+        <SvgWave className={`svg-shadow dark:fill-primary fill-light`} />
+        <Link
+          smooth
+          spy
+          to="proyectos"
+          className="hidden cursor-pointer lg:block"
+        >
           <svg
             className="absolute bottom-10 left-1/2 animate-bounce"
             width="78"
@@ -49,7 +58,7 @@ function Hero() {
               fill="#2C3E50"
             />
           </svg>
-        </button>
+        </Link>
       </div>
     </div>
   );

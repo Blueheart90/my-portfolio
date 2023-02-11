@@ -46,16 +46,17 @@ main {
 
 .braces {
   color: var(--secondary-color);
+
   }
   
-  .braces::before, .braces::after {
-  color: var(--light-color);
-  }
-  .braces::before {
-  content: '{';
-  
-  }
-  .braces::after {
-  content: '}';
-  }
+.braces::before, .braces::after {
+color: var(--light-color);
+}
+.braces::before {
+content: '{';
+
+}
+.braces::after {
+content: '}';
+}
     

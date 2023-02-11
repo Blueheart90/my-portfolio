@@ -34,7 +34,7 @@ function AboutMe() {
   const cvPdf = aboutme.attributes.curriculum;
 
   return (
-    <div className="grid gap-10 px-10 text-2xl md:px-0 md:grid-cols-2 text-light">
+    <div className="grid gap-10 px-10 text-2xl md:px-0 md:grid-cols-2 dark:text-light text-primary">
       <div className="grid gap-14">
         <div dangerouslySetInnerHTML={{ __html: aboutme.attributes.content }} />
         <ButtonCustom>

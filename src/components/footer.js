@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="py-10 mt-20 text-xl text-center footer bg-primary text-light">
+    <footer className="py-10 text-xl text-center footer bg-primary text-light">
       <p>
         Diseñado y construido por{' '}
         <span className="font-bold braces">Jesús David</span>

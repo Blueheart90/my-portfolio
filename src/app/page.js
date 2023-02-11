@@ -14,22 +14,28 @@ const inter = Inter({ subsets: ['latin'] });
 export default function Home() {
   return (
     <main>
-      <Hero />{' '}
-      <section className=" bg-light">
+      <Hero />
+      <section id="proyectos" className="bg-white dark:bg-light">
         <article className="container mx-auto">
           <Title styles={'text-primary'}>Proyectos</Title>
           <ProjectList />
         </article>
       </section>
-      <SvgWave className={`svg-shadow fill-primary rotate-180`} />
-      <section className="-mt-1  bg-primary">
+      <div className="bg-white dark:bg-light">
+        <SvgWave
+          className={`svg-shadow dark:fill-primary fill-light rotate-180`}
+        />
+      </div>
+      <section id="sobre-mi" className="-mt-1 dark:bg-primary bg-light">
         <article className="container mx-auto">
-          <Title styles={'text-light'}>Sobre mí</Title>
+          <Title styles={'dark:text-light text-primary'}>Sobre mí</Title>
           <AboutMe />
         </article>
       </section>
-      <SvgWave className={`svg-shadow fill-primary`} />
-      <section>
+      <div className="bg-white dark:bg-light">
+        <SvgWave className={`svg-shadow dark:fill-primary fill-light`} />
+      </div>
+      <section id="contacto" className="bg-white dark:bg-light">
         <article className="container mx-auto">
           <Title styles={'text-primary'}>Contactame</Title>
           <div className="w-3/4 mx-auto mb-10 ">
@@ -42,6 +48,40 @@ export default function Home() {
         </article>
       </section>
       <Footer />
+      <div className="fixed bottom-10 bg-primary shadow-[5px_5px_0px_0px_#33CCCC] py-2 px-1 flex flex-col gap-2">
+        <figure className="cursor-pointer ">
+          <Image
+            src="/img/icon-github2.svg"
+            height={30}
+            width={30}
+            alt="Icono de github"
+          />
+        </figure>
+        <figure className="cursor-pointer ">
+          <Image
+            src="/img/icon-twitter.svg"
+            height={30}
+            width={30}
+            alt="Icono de github"
+          />
+        </figure>
+        <figure className="cursor-pointer ">
+          <Image
+            src="/img/icon-mail.svg"
+            height={30}
+            width={30}
+            alt="Icono de github"
+          />
+        </figure>
+        <figure className="cursor-pointer ">
+          <Image
+            src="/img/icon-linkedln.svg"
+            height={30}
+            width={30}
+            alt="Icono de github"
+          />
+        </figure>
+      </div>
     </main>
   );
 }

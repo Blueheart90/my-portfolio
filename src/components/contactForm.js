@@ -28,7 +28,7 @@ function ContactForm() {
     }
   };
   return (
-    <div className="max-w-lg mx-auto">
+    <div className="max-w-lg pb-20 mx-auto">
       <Formik
         initialValues={{ name: '', email: '', message: '' }}
         validationSchema={ContactFormSchema}
