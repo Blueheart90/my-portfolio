@@ -3,14 +3,14 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Link } from 'react-scroll';
 import Switcher from './switcher';
-import LanguageSvg from './languageSvg';
+import { Turn as Hamburger } from 'hamburger-react';
 
 function Header() {
-  const [openMenu, setOpenMenu] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   return (
     <header className="fixed z-10 w-screen px-4 py-2 transition-all duration-500 border-b sm:px-10 dark:bg-primary bg-light text-primary dark:text-light border-accent">
-      <div className="flex justify-between">
+      <div className="flex items-center justify-between h-12 ">
         <div className="flex gap-10">
           <Link className="cursor-pointer select-none " smooth spy to="top">
             <Image
@@ -58,46 +58,59 @@ function Header() {
             </ul>
           </nav>
         </div>
-        <div className="items-center hidden gap-4 md:flex">
-          <button className="flex items-center gap-1">
-            <LanguageSvg className=" dark:fill-light fill-accent" />
-            Es
-          </button>
+        <div className="flex items-center gap-4">
           <Switcher />
+          <div className="md:hidden">
+            <Hamburger
+              color="#33CCCC"
+              toggled={isOpen}
+              toggle={setOpen}
+              size="20"
+            />
+          </div>
         </div>
-        <button
-          onClick={() => {
-            setOpenMenu(!openMenu);
-          }}
-          className=" md:hidden"
-        >
-          <Image
-            src="/img/burger-menu.svg"
-            alt="Icono con tres rayas horizontales"
-            width={40}
-            height={40}
-          />
-        </button>
       </div>
 
       {/* Mobile menu */}
       <nav
         className={`${
-          openMenu ? '' : 'hidden'
-        } transition-all duration-500 overflow-hidden`}
+          isOpen ? '' : 'left-full'
+        } transition-all duration-500  absolute top-16 left-0 w-screen dark:bg-primary border-y border-accent bg-light md:hidden`}
       >
         <ul className="flex flex-col items-center">
           <li className="py-4 ">
-            <a href="#">Proyectos</a>
+            <Link
+              className="py-4 cursor-pointer select-none "
+              activeClass=" text-accent font-medium"
+              smooth
+              spy
+              to="proyectos"
+            >
+              Proyectos
+            </Link>
+          </li>
+
+          <li className="py-4 ">
+            <Link
+              className="py-4 cursor-pointer select-none "
+              activeClass=" text-accent font-medium"
+              smooth
+              spy
+              to="sobre-mi"
+            >
+              Sobre mí
+            </Link>
           </li>
           <li className="py-4 ">
-            <a href="#">Habilidades</a>
-          </li>
-          <li className="py-4 ">
-            <a href="#">Sobre mí</a>
-          </li>
-          <li className="py-4 ">
-            <a href="#">Contacto</a>
+            <Link
+              className="py-4 cursor-pointer select-none "
+              activeClass=" text-accent font-medium"
+              smooth
+              spy
+              to="contacto"
+            >
+              Contacto
+            </Link>
           </li>
         </ul>
       </nav>
