@@ -37,16 +37,16 @@ function Hero() {
           </p>
         </div>
       </div>
-      <div className="relative bg-white dark:bg-light">
+      <div className="bg-white dark:bg-light">
         <SvgWave className={`svg-shadow dark:fill-primary fill-light`} />
         <Link
           smooth
           spy
           to="proyectos"
-          className="hidden cursor-pointer lg:block"
+          className="hidden cursor-pointer lg:justify-center lg:flex"
         >
           <svg
-            className="absolute bottom-10 left-1/2 animate-bounce"
+            className=" left-1/2 animate-bounce"
             width="78"
             height="79"
             viewBox="0 0 78 79"

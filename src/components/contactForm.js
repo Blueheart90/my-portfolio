@@ -9,11 +9,12 @@ import Alert from './alert';
 import LoadingSvg from './loadingSvg';
 
 function ContactForm() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleAlert = () => {
     setIsOpen(true);
+    // auto-close alert
     setTimeout(() => {
       setIsOpen(false);
     }, 7000);
@@ -21,24 +22,24 @@ function ContactForm() {
 
   const handleSubmit = async (values, resetForm) => {
     setIsLoading(true);
-    // const res = await fetch('/api/sendgrid', {
-    //   body: JSON.stringify({
-    //     email: values.email,
-    //     fullname: values.name,
-    //     subject: 'contacto subject',
-    //     message: values.message,
-    //   }),
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   method: 'POST',
-    // });
+    const res = await fetch('/api/sendgrid', {
+      body: JSON.stringify({
+        email: values.email,
+        fullname: values.name,
+        subject: 'contacto subject',
+        message: values.message,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+    });
 
-    // const { error } = await res.json();
-    // if (error) {
-    //   console.log(error);
-    //   return;
-    // }
+    const { error } = await res.json();
+    if (error) {
+      console.log(error);
+      return;
+    }
     setTimeout(() => {
       handleAlert();
       setIsLoading(false);
