@@ -74,8 +74,8 @@ function Header() {
       {/* Mobile menu */}
       <nav
         className={`${
-          isOpen ? '' : 'left-full'
-        } transition-all duration-500  absolute top-16 left-0 w-screen dark:bg-primary border-y border-accent bg-light md:hidden`}
+          isOpen ? 'left-0' : '-left-full'
+        } transition-all duration-500  absolute top-16  w-screen dark:bg-primary border-y border-accent bg-light md:hidden`}
       >
         <ul className="flex flex-col items-center">
           <li className="py-4 ">

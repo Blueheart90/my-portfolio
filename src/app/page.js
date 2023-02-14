@@ -8,6 +8,7 @@ import SvgWave from '@/components/svgWave';
 import AboutMe from '@/components/aboutMe';
 import ContactForm from '@/components/contactForm';
 import Footer from '@/components/footer';
+import SocialsMedia from '@/components/socialsMedia';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -47,41 +48,8 @@ export default function Home() {
           <ContactForm />
         </article>
       </section>
+      <SocialsMedia />
       <Footer />
-      <div className="fixed bottom-10 bg-primary shadow-[5px_5px_0px_0px_#33CCCC] py-2 px-1 flex flex-col gap-2">
-        <figure className="cursor-pointer ">
-          <Image
-            src="/img/icon-github2.svg"
-            height={30}
-            width={30}
-            alt="Icono de github"
-          />
-        </figure>
-        <figure className="cursor-pointer ">
-          <Image
-            src="/img/icon-twitter.svg"
-            height={30}
-            width={30}
-            alt="Icono de github"
-          />
-        </figure>
-        <figure className="cursor-pointer ">
-          <Image
-            src="/img/icon-mail.svg"
-            height={30}
-            width={30}
-            alt="Icono de github"
-          />
-        </figure>
-        <figure className="cursor-pointer ">
-          <Image
-            src="/img/icon-linkedln.svg"
-            height={30}
-            width={30}
-            alt="Icono de github"
-          />
-        </figure>
-      </div>
     </main>
   );
 }
