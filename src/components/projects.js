@@ -7,7 +7,6 @@ export const getProjects = async () => {
   const requestOptions = {
     headers: {
       Authorization: `Bearer ${process.env.API_TOKEN}`,
-      cache: 'no-store',
     },
   };
   const response = await fetch(
