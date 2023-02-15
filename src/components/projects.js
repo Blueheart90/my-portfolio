@@ -1,6 +1,7 @@
 import { use } from 'react';
 import Project from './project';
 import Title from '@/components/title';
+import { headers } from 'next/headers';
 
 export const getProjects = async () => {
   const requestOptions = {
