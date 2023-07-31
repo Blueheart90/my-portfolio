@@ -12,7 +12,7 @@ export const getAboutMe = async () => {
   };
 
   const aboutmeUrl = `${process.env.API_URL}/about-me`;
-  const skillsUrl = `${process.env.API_URL}/skill?populate[0]=tecnologies&populate[1]=tecnologies.icon`;
+  const skillsUrl = `${process.env.API_URL}/skills?populate[0]=technologies&populate[1]=technologies.icon`;
 
   const [resAboutme, resSkill] = await Promise.all([
     fetch(aboutmeUrl, requestOptions),
@@ -26,12 +26,13 @@ export const getAboutMe = async () => {
 
   return {
     aboutme,
-    skills: skills.attributes.tecnologies,
+    skills: skills.attributes.technologies,
   };
 };
 
 function AboutMe() {
   const { aboutme, skills } = use(getAboutMe());
+  console.log(skills);
   const cvPdf = aboutme.attributes.curriculum;
 
   return (
